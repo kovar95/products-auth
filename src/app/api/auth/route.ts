@@ -22,8 +22,6 @@ export async function GET(
       }
     );
 
-    console.log(res);
-
     return NextResponse.json({ token: res.data.data.token, error: null });
   } catch (error) {
     return NextResponse.json({
