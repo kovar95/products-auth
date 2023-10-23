@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+First, make new file `.env.local`, copy content from `.example-env` and fill with the corresponding environment variables
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +16,30 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You will see the home page with list of available products and avatar for user login/logout
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Registration
 
-## Learn More
+Go to [http://localhost:3000/signup](http://localhost:3000/signup) to register new user.
 
-To learn more about Next.js, take a look at the following resources:
+You will not have an option to go directly there. You will be offered to login, and if you don't have
+an account, you will have option to go to sign up page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Sign in
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Clicking on the avatar icon, you will have an option to go to login page:
+Page: [http://localhost:3000/login](http://localhost:3000/login)
+Session will be stored and you will have an option to sign out, clicking at the avatar sign again.
 
-## Deploy on Vercel
+If user is logged in, accessing the pages `login` and `signup` will be handled with middleware and user will be redirected to the
+home page.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## What is used for making this application work
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- MUI and Styled components for UI
+- Formik and Yup for form validation
+- Axios for requests
+- Tanstack Query for handling queries and mutations
+- cookies-next for cookies handling
+- NextAuth for authentication and session management
+- And of course TypeScript for type checking

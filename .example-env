@@ -1,0 +1,4 @@
+NEXT_PUBLIC_INSBY_USERNAME=example_username
+NEXT_PUBLIC_INSBY_PASSWORD=example_password
+NEXT_PUBLIC_INSBY_API=example_api
+NEXTAUTH_SECRET=example_secret
