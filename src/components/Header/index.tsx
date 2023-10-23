@@ -28,7 +28,7 @@ const Header: FC = () => {
     setAnchorElUser(null);
   };
 
-  const handleStatus = (event: MouseEvent<HTMLElement>) => {
+  const handleStatus = () => {
     if (user) {
       signOut();
     } else {

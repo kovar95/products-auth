@@ -12,7 +12,7 @@ type Props = {
 export default function AuthProvider({ children }: Props): React.ReactElement {
   const authQuery = useQuery({
     queryKey: ["auth"],
-    queryFn: () => axios.get("/api/auth/"),
+    queryFn: () => axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/`),
   });
 
   const token = authQuery?.data?.data?.token;

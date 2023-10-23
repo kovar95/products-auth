@@ -45,10 +45,13 @@ const SignupForm: FC = () => {
     mutationFn: async (user: FormikValues) => {
       const { email, ...rest } = user;
 
-      const res = await axios.post("/api/auth/register", {
-        ...rest,
-        login: email,
-      });
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/register`,
+        {
+          ...rest,
+          login: email,
+        }
+      );
 
       if (res.data?.error) {
         throw new Error("User already exists!");

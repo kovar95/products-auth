@@ -11,7 +11,8 @@ import { getCookie } from "cookies-next";
 export default function Home() {
   const productsQuery = useQuery({
     queryKey: ["products"],
-    queryFn: () => axios.get("/api/products"),
+    queryFn: () =>
+      axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`),
     enabled: !!getCookie("token"),
   });
 
