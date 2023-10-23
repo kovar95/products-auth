@@ -20,3 +20,5 @@ const findPlatform = () => {
 
   return operatingSystem;
 };
+
+export default findPlatform;

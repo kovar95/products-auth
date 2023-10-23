@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import axios, { AxiosError } from "axios";
 import { uuid } from "uuidv4";
+import findPlatform from "@/utils/findPlatform";
 
 export async function GET(
   _request: Request
