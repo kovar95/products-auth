@@ -8,6 +8,8 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { getCookie } from "cookies-next";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   const productsQuery = useQuery({
     queryKey: ["products"],
